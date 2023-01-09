@@ -1,0 +1,130 @@
+@@include('inc/header.html', { "title": "Главная" })
+
+<section class="section firstscreen">
+	<div class="firstscreen-slide active" id="slide1">
+		<div class="firstscreen-slide-img"></div>
+		<div class="container">
+			<div class="firstscreen-text">
+				<div class="firstscreen-title">Custom <span>web development</span>, secure communications and webservices, corporate portals</div>
+				<p>Lorem ipsum dolor sit amet consectetur. In odio sit eleifend justo. Gravida et habitant et accumsan. Id eget urna sociis id fermentum. Pretium augue in.</p>
+				<a href="#slide2" class="btn btn-primary btn-more firstscreen-more"><span>Next slide</span></a>
+			</div>
+		</div>
+	</div><!-- /slide -->
+
+	<div class="firstscreen-slide" id="slide2">
+		<div class="firstscreen-slide-img"></div>
+		<div class="container">
+			<div class="firstscreen-text">
+				<div class="firstscreen-title">Other text's <span>title</span> is going to be here. Other text's <span>title</span> is going to be here</div>
+				<p>Lorem ipsum dolor sit amet consectetur. In odio sit eleifend justo. Gravida et habitant et accumsan. Id eget urna sociis id fermentum. Pretium augue in.</p>
+				<a href="#slide1" class="btn btn-primary btn-more firstscreen-more"><span>Next slide</span></a>
+			</div>
+		</div>
+	</div><!-- /slide -->
+</section><!-- /firstscreen -->
+
+
+<div class="special_offer">
+	<div class="special_offer-inner">
+		<div class="special_offer-title">Специальное предложение</div>
+		<div class="special_offer-text">
+			При заказе на сумму более $33k скидка 3.33%.<br>
+			А также доступ  во внутренний чат наших клиентов, получивших такую же скидку. 
+		</div>
+		<a href="#" class="btn btn-warning">Подробнее</a>
+		<a href="#" class="closebtn js-special_offer"></a>
+	</div>
+</div><!-- /special_offer -->
+
+
+<section class="section section-testimonials">
+	<div class="container">
+		@@include('inc/title.html', { "title": "Testimonials", "btn": "Show all" })
+		<div class="row testimonial-row">
+			@@loop('inc/testimonial.html', [
+				{}, {}, {}, {}, {}, {}
+			])
+		</div><!-- /row -->	
+	</div>
+</section><!-- /section -->
+
+
+<section class="section section-tech">
+	<div class="container">
+		@@include('inc/title.html', { "title": "Technologies" })
+		@@include('inc/tech.html')
+	</div>
+</section><!-- /section -->
+
+
+<section class="section section-wedo">
+	<div class="section-notify">
+		<div class="section-notify-inner">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex assumenda minima sit, facere iure aut consequuntur eligendi, exercitationem quos sint similique vel odit possimus esse officiis pariatur est. Rerum quaerat temporibus tenetur odit minima sit officia.
+		</div>
+	</div><!-- /section-notify -->
+
+	<div class="section-wedo-inner">
+		<div class="container">
+			@@include('inc/title.html', { "title": "What we do" })
+
+			<div class="wedo-row">
+				<div class="row">
+					@@loop('inc/wedo.html', [
+						{ "title": "Custom web application development" },
+						{ "title": "Custom MVP development" },
+						{ "title": "Parsing sites and reices" },
+						{ "title": "Progressive Web Applications (PWA)" },
+						{ "title": "Secure communications" },
+						{ "title": "DevOps development" }
+					])
+				</div>
+				<div class="wedo-title morelink">
+					<a href="#">All services</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section><!-- /section -->
+
+
+<section class="section section-how">
+	
+	<div class="section-notify">
+		<div class="section-notify-inner">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex assumenda minima sit, facere iure aut consequuntur eligendi, exercitationem quos sint similique vel odit possimus esse officiis pariatur est. Rerum quaerat temporibus tenetur odit minima sit officia.
+		</div>
+	</div><!-- /section-notify -->
+
+	
+	<div class="section-how-skew"></div>
+	<div class="section-how-inner">
+		<div class="container">
+			@@include('inc/title.html', { "title": "How we work", "btn": "Show all", "hide_mob": true })
+
+			<div class="stepsrow">
+				@@loop('inc/step.html', [
+					{ "title": "Step 1", "id": "1" },
+					{ "title": "Step 2", "id": "2" },
+					{ "title": "Step 3", "id": "3" },
+					{ "title": "Step 4", "id": "4", "last": true }
+				])
+			</div><!-- /stepsrow -->
+		</div>
+	</div>
+</section><!-- /section -->
+
+
+<section class="section section-blog">
+	<div class="container">
+		@@include('inc/title.html', { "title": "Последние статьи в блоге", "more": "Show all" })
+		<div class="row blog-row">
+			@@loop('inc/blog.html', [
+				{}, {}, {}
+			])
+		</div><!-- /row -->
+	</div>
+</section><!-- /section -->
+
+@@include('inc/footer.html')

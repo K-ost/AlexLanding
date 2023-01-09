@@ -1,0 +1,8 @@
+<div class="tech-pane@@if(context.active){ active}" id="@@id">
+  @@for(var i = 0; i < list.length; i++) {
+  <div class="tech-item">
+    <img src="images/logos/` + list[i].img + `.png" alt="">
+    <span>` + list[i].name + `</span>
+  </div>
+  }
+</div><!-- /@@id -->

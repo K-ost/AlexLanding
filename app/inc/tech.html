@@ -1,0 +1,59 @@
+<div class="tech-container">
+  <ul class="tech-tabs">
+    <li><a href="#tab1" class="active">Backend</a></li>
+    <li><a href="#tab2">DevOps</a></li>
+    <li><a href="#tab3">Frontend</a></li>
+    <li><a href="#tab4">Database and storage</a></li>
+    <li><a href="#tab5">Parsing</a></li>
+    <li><a href="#tab6">Security</a></li>
+    <li><a href="#tab7">Mobile</a></li>
+  </ul>
+
+  <div class="tech-panes">
+    @@loop('tech-pane.html', [
+      { "id": "tab1", "active": true, "list": [
+        { "img": "php", "name": "PHP" },
+        { "img": "node", "name": "Node.js" },
+        { "img": "python", "name": "Python" },
+        { "img": "symphony", "name": "Symphony" },
+        { "img": "laravel", "name": "Laravel" },
+        { "img": "yii", "name": "Yii" },
+        { "img": "swoole", "name": "Swoole" },
+        { "img": "express", "name": "Express" },
+        { "img": "loopback", "name": "Loopback" },
+        { "img": "wordpress", "name": "WordPress" }
+      ]},
+      { "id": "tab2", "list": [
+        { "img": "node", "name": "Node.js" },
+        { "img": "python", "name": "Python" },
+        { "img": "express", "name": "Express" }
+      ]},
+      { "id": "tab3", "list": [
+        { "img": "node", "name": "Node.js" },
+        { "img": "python", "name": "Python" },
+        { "img": "express", "name": "Express" }
+      ]},
+      { "id": "tab4", "list": [
+        { "img": "node", "name": "Node.js" },
+        { "img": "python", "name": "Python" },
+        { "img": "express", "name": "Express" }
+      ]},
+      { "id": "tab5", "list": [
+        { "img": "node", "name": "Node.js" },
+        { "img": "python", "name": "Python" },
+        { "img": "express", "name": "Express" }
+      ]},
+      { "id": "tab6", "list": [
+        { "img": "node", "name": "Node.js" },
+        { "img": "python", "name": "Python" },
+        { "img": "express", "name": "Express" }
+      ]},
+      { "id": "tab7", "list": [
+        { "img": "node", "name": "Node.js" },
+        { "img": "python", "name": "Python" },
+        { "img": "express", "name": "Express" }
+      ]}
+    ])
+
+  </div><!-- /tech-panes -->
+</div><!-- /tech-container -->

@@ -1,0 +1,9 @@
+<div class="pageheader">
+  <h2>@@title</h2>
+  @@if(context.btn){
+    <a href="#" class="btn@@if(context.hide_mob){ tb-hidden}">@@btn</a>
+  }
+  @@if(context.more){
+    <a href="#" class="btn btn-primary btn-more@@if(context.more){ tb-hidden}">@@more</a>
+  }
+</div><!-- /pageheader -->
