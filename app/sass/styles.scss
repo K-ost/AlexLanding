@@ -84,13 +84,13 @@
 
 /* section */
 .section {
-  padding: 110px 0; position: relative;
+  padding: 60px 0; position: relative;
 }
 
 
 /* pageheader */
 .pageheader {
-  display: flex; align-items: center; justify-content: space-between; margin: 0 0 37px;
+  display: flex; align-items: center; justify-content: space-between; margin: 0 0 26px;
   h2 {font-weight: 500; font-size: 36px; line-height: 47px; margin: 0;}
 }
 
@@ -103,7 +103,7 @@
     width: 100%; height: 100%; position: absolute; left: 0; top: 0;
     padding: 120px 0 80px; opacity: 0; visibility: hidden;
     transition: all 300ms ease-in-out;
-    &-img {
+    &-img, &-phone {
       background-position: center 0; background-repeat: no-repeat;
       position: absolute; left: 0; top: 0; width: 100%; height: 100%;
     }
@@ -112,13 +112,19 @@
       background-size: cover;
     }
     &#slide2 &-img {
-      background-image: url(../images/screens.webp);
+      background-image: url(../images/screens2.webp);
       background-size: cover;
       opacity: 0.5;
     }
+    &#slide2 &-phone {
+      background-image: url(../images/phone.webp);
+      background-size: cover;
+      opacity: 0.7;
+    }
 
     &.active {opacity: 1; visibility: visible;}
-    &.active &-img {animation: slideShow 800ms ease-in-out 500ms 1 backwards;}
+    &.active &-img {animation: slideShow 1s ease-in-out 1.5s 1 backwards;}
+    &.active &-phone {animation: slideShow 500ms ease-in-out 2.5s 1 backwards;}
   }
   .container {display: flex; height: 100%; align-items: flex-end; position: relative;}
   &-text {
@@ -130,11 +136,21 @@
     margin: 0 0 24px; color: #fff;
     span {color: $orange;}
   }
+  &-desc {margin: 0 0 20px;}
+  &-slide.active &-title,
+  &-slide.active &-desc,
+  &-slide.active &-more {animation: slideUp 500ms ease-out 1 backwards;}
+  &-slide.active &-desc {animation-delay: 300ms;}
+  &-slide.active &-more {animation-delay: 500ms;}
 }
 
 @keyframes slideShow {
   0% {opacity: 0;}
   100% {opacity: 0.5;}
+}
+@keyframes slideUp {
+  from {opacity: 0; transform: translateX(-30px);}
+  to {opacity: 1; transform: translateX(0);}
 }
 
 
@@ -393,7 +409,7 @@
 
 
 /* Sticky sections for screens over 1920 */
-@media screen and (min-width: 1920px) {
+@media screen and (min-height: 900px) {
   .section-testimonials, .section-wedo {position: sticky; top: 0;}
 }
 

@@ -775,7 +775,7 @@ li:hover .file-list-remove {
 
 /* section */
 .section {
-  padding: 110px 0;
+  padding: 60px 0;
   position: relative;
 }
 
@@ -784,7 +784,7 @@ li:hover .file-list-remove {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 0 37px;
+  margin: 0 0 26px;
 }
 .pageheader h2 {
   font-weight: 500;
@@ -810,7 +810,7 @@ li:hover .file-list-remove {
   visibility: hidden;
   transition: all 300ms ease-in-out;
 }
-.firstscreen-slide-img {
+.firstscreen-slide-img, .firstscreen-slide-phone {
   background-position: center 0;
   background-repeat: no-repeat;
   position: absolute;
@@ -824,16 +824,24 @@ li:hover .file-list-remove {
   background-size: cover;
 }
 .firstscreen-slide#slide2 .firstscreen-slide-img {
-  background-image: url(../images/screens.webp);
+  background-image: url(../images/screens2.webp);
   background-size: cover;
   opacity: 0.5;
+}
+.firstscreen-slide#slide2 .firstscreen-slide-phone {
+  background-image: url(../images/phone.webp);
+  background-size: cover;
+  opacity: 0.7;
 }
 .firstscreen-slide.active {
   opacity: 1;
   visibility: visible;
 }
 .firstscreen-slide.active .firstscreen-slide-img {
-  animation: slideShow 800ms ease-in-out 500ms 1 backwards;
+  animation: slideShow 1s ease-in-out 1.5s 1 backwards;
+}
+.firstscreen-slide.active .firstscreen-slide-phone {
+  animation: slideShow 500ms ease-in-out 2.5s 1 backwards;
 }
 .firstscreen .container {
   display: flex;
@@ -858,6 +866,18 @@ li:hover .file-list-remove {
 .firstscreen-title span {
   color: #FF9922;
 }
+.firstscreen-desc {
+  margin: 0 0 20px;
+}
+.firstscreen-slide.active .firstscreen-title, .firstscreen-slide.active .firstscreen-desc, .firstscreen-slide.active .firstscreen-more {
+  animation: slideUp 500ms ease-out 1 backwards;
+}
+.firstscreen-slide.active .firstscreen-desc {
+  animation-delay: 300ms;
+}
+.firstscreen-slide.active .firstscreen-more {
+  animation-delay: 500ms;
+}
 
 @keyframes slideShow {
   0% {
@@ -865,6 +885,16 @@ li:hover .file-list-remove {
   }
   100% {
     opacity: 0.5;
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 /* testimonial */
@@ -1444,7 +1474,7 @@ li:hover .file-list-remove {
 }
 
 /* Sticky sections for screens over 1920 */
-@media screen and (min-width: 1920px) {
+@media screen and (min-height: 900px) {
   .section-testimonials, .section-wedo {
     position: sticky;
     top: 0;
