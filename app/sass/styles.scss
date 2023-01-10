@@ -34,7 +34,7 @@
 .navmenu {
   ul {display: flex;}
   li {
-    line-height: 18px; font-weight: 400; margin: 0 50px 0 0;
+    line-height: 18px; font-weight: 400; margin: 0 50px 0 0; @include font2;
     &:last-child {margin: 0;}
     a {color: #808080; text-decoration: none; position: relative; display: block; padding: 10px 0;}
     a.active {color: $orange !important; text-decoration: none;}
@@ -91,7 +91,7 @@
 /* pageheader */
 .pageheader {
   display: flex; align-items: center; justify-content: space-between; margin: 0 0 26px;
-  h2 {font-weight: 500; font-size: 36px; line-height: 47px; margin: 0;}
+  h2 {font-weight: 500; font-size: 36px; line-height: 47px; margin: 0; @include font2;}
 }
 
 
@@ -132,7 +132,7 @@
     line-height: 31px; max-width: 1060px;
   }
   &-title {
-    font-weight: 500; font-size: 50px; line-height: 62px;
+    font-weight: 500; font-size: 50px; line-height: 62px; @include font2;
     margin: 0 0 24px; color: #fff;
     span {color: $orange;}
   }
@@ -218,15 +218,15 @@
     }
   }
   .container {position: relative; z-index: 10;}
-  .pageheader {margin: 0 0 80px;}
-  .pageheader h2 {background: #fff; border-radius: 100px; padding: 12px 24px;}
+  .pageheader {margin: 0 0 50px;}
+  .pageheader h2 {background: #fff; border-radius: 100px; padding: 8px 24px;}
 }
 
 
 .wedo {
-  color: #fff; margin-bottom: 80px;
+  color: #fff; margin-bottom: 50px;
   &-title {
-    margin: 0 0 30px; font-size: 24px; line-height: 31px;
+    margin: 0 0 14px; font-size: 24px; line-height: 31px; @include font2;
     a {
       color: #fff; text-decoration: none; position: relative; padding-right: 20px;
       &::after {@include bf; right: 0; bottom: 8px; @include icon(more,12px,12px); display: none;}
@@ -241,6 +241,7 @@
       a::after {display: block; width: 16px; height: 16px; background-size: 16px; bottom: 5px;}
     }
   }
+  &-text {font-size: 16px; line-height: 22px; color: rgba(255, 255, 255, 0.6); font-weight: 300;}
   &-row {max-width: 1240px; margin-left: 24px;}
 }
 
@@ -264,7 +265,7 @@
   display: flex;
   .stepbox {
     min-height: 100%; margin: 0 20px 0 0;
-    min-width: 500px; max-width: 500px;
+    min-width: 400px; max-width: 400px;
     &::after {
       @include bf; left: 0; top: 0; bottom: 0; right: 0;
       background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px);
@@ -275,9 +276,9 @@
 }
 .stepbox {
   border: 1px solid #DFDFDF; border-radius: 12px; position: relative;
-  display: flex; align-items: center; padding: 40px 20px 40px 0;
+  display: flex; align-items: center; padding: 30px 10px 30px 0;
   &-img {
-    min-width: 190px; max-width: 190px; position: relative;
+    min-width: 100px; max-width: 100px; position: relative;
     &::after {
       @include bf; width: 100%; height: 100%; background: #559EDF;
       left: 0; top: 0; mix-blend-mode: color;
@@ -285,8 +286,8 @@
     img {display: block;}
   }
   &-entry {padding-left: 14px;}
-  &-title {font-weight: 400; font-size: 24px; color: #000; margin: 0 0 24px;}
-  &-text {color: #838383;}
+  &-title {font-weight: 400; font-size: 24px; color: #000; margin: 0 0 20px;}
+  &-text {color: #838383; font-size: 16px; line-height: 22px;}
   &-last .btn {
     position: absolute; left: 50%; top: 50%; z-index: 10;
     transform: translate(-50%, -50%);

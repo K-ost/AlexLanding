@@ -3,10 +3,12 @@ $purple: #7221F5;
 $orange: #FF9922;
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 
 @mixin clr { &:after {content: ''; clear: both; display: block;} }
 @mixin bf {content: ''; position: absolute; display: block;}
 @mixin font {font-family: 'Rubik', sans-serif;}
+@mixin font2 {font-family: 'Roboto Condensed', sans-serif;}
 @mixin gradv($from, $to) {
 	background: $from;
 	background: -moz-linear-gradient(top, $from 0%, $to 100%);
