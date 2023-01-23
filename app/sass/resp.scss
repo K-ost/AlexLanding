@@ -108,7 +108,9 @@
       &#slide2 &-img {
         background-image: url(../images/screens-tb.webp);
         background-size: 100%;
+        display: block;
       }
+      &-screen {display: none;}
     }
   }
 

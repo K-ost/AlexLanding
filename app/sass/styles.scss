@@ -103,7 +103,7 @@
     width: 100%; height: 100%; position: absolute; left: 0; top: 0;
     padding: 120px 0 80px; opacity: 0; visibility: hidden;
     transition: all 300ms ease-in-out;
-    &-img, &-phone {
+    &-img, &-phone, &-screen {
       background-position: center 0; background-repeat: no-repeat;
       position: absolute; left: 0; top: 0; width: 100%; height: 100%;
     }
@@ -115,6 +115,7 @@
       background-image: url(../images/screens2.webp);
       background-size: cover;
       opacity: 0.5;
+      display: none;
     }
     &#slide2 &-phone {
       background-image: url(../images/phone.webp);
@@ -122,9 +123,33 @@
       opacity: 0.7;
     }
 
+    &-screen {
+      background-size: cover; opacity: 0.7;
+      &-1 {
+        background-image: url(../images/screen1.webp);
+      }
+      &-2 {
+        background-image: url(../images/screen2.webp);
+      }
+      &-3 {
+        background-image: url(../images/screen3.webp);
+      }
+      &-4 {
+        background-image: url(../images/screen4.webp);
+      }
+      &-5 {
+        background-image: url(../images/screen5.webp);
+      }
+    }
+
     &.active {opacity: 1; visibility: visible;}
-    &.active &-img {animation: slideShow 1s ease-in-out 1.5s 1 backwards;}
+    //&.active &-img {animation: slideShow 1s ease-in-out 1.5s 1 backwards;}
     &.active &-phone {animation: slideShow 500ms ease-in-out 2.5s 1 backwards;}
+    &.active &-screen-1 {animation: slideShow 500ms ease-in-out 200ms 1 backwards;}
+    &.active &-screen-2 {animation: slideShow 500ms ease-in-out 500ms 1 backwards;}
+    &.active &-screen-3 {animation: slideShow 500ms ease-in-out 800ms 1 backwards;}
+    &.active &-screen-4 {animation: slideShow 500ms ease-in-out 1.1s 1 backwards;}
+    &.active &-screen-5 {animation: slideShow 500ms ease-in-out 1.4s 1 backwards;}
   }
   .container {display: flex; height: 100%; align-items: flex-end; position: relative;}
   &-text {
