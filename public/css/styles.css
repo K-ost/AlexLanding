@@ -2699,4 +2699,15 @@ li:hover .file-list-remove {
     margin: 0 0 10px;
     bottom: auto;
   }
+
+  /* article */
+  .article .alignleft, .article .alignright {
+    float: none;
+    display: block;
+    margin: 24px auto;
+  }
+  .article figure {
+    display: block;
+    width: 300px;
+  }
 }

@@ -259,4 +259,13 @@
     position: relative; left: auto; transform: none !important;
     top: -20px; margin: 0 0 10px; bottom: auto;
   }
+
+
+  /* article */
+  .article {
+    .alignleft, .alignright {float: none; display: block; margin: 24px auto;}
+    figure {display: block; width: 300px;}
+  }
+
+
 }
