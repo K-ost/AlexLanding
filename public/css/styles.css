@@ -609,27 +609,27 @@ li:hover .file-list-remove {
 .header .btn {
   padding: 10px 20px;
 }
-.header.whited {
+.header.whited, .header-inner {
   background: #fff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
   padding: 4px 0;
 }
-.header.whited .navmenu li a {
+.header.whited .navmenu li a, .header-inner .navmenu li a {
   color: #808080;
 }
-.header.whited .navbars {
+.header.whited .navbars, .header-inner .navbars {
   background-image: url(../images/svg/bars-dark.svg);
 }
-.header.whited .navbars.active {
+.header.whited .navbars.active, .header-inner .navbars.active {
   background-image: url(../images/svg/close-black.svg);
 }
-.header.whited .logo .logo-white {
+.header.whited .logo .logo-white, .header-inner .logo .logo-white {
   display: none;
 }
-.header.whited .logo .logo-black {
+.header.whited .logo .logo-black, .header-inner .logo .logo-black {
   display: block;
 }
-.header.whited .btn {
+.header.whited .btn, .header-inner .btn {
   padding-top: 8px;
   padding-bottom: 8px;
 }
@@ -783,6 +783,9 @@ li:hover .file-list-remove {
   padding: 60px 0;
   position: relative;
 }
+.section-inner {
+  padding-top: 80px;
+}
 
 /* pageheader */
 .pageheader {
@@ -797,6 +800,95 @@ li:hover .file-list-remove {
   line-height: 47px;
   margin: 0;
   font-family: "Roboto Condensed", sans-serif;
+}
+
+/* article */
+.article {
+  margin: 0 0 40px;
+}
+.article:last-child {
+  margin: 0;
+}
+.article h1 {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 47px;
+  margin: 0 0 20px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.article-date {
+  color: #757575;
+  margin: 0 0 20px;
+  font-size: 16px;
+  line-height: 20px;
+}
+.article .alignleft {
+  float: left;
+  margin: 3px 20px 0 0;
+}
+.article .alignright {
+  float: right;
+  margin: 3px 0 0 20px;
+}
+.article .aligncenter {
+  display: block;
+  margin: 24px auto;
+}
+.article figure {
+  display: block;
+}
+.article figure img {
+  display: block;
+}
+.article figure figcaption {
+  display: block;
+  color: #757575;
+  font-size: 16px;
+  line-height: 20px;
+  border: 1px solid #ededed;
+  padding: 10px 14px;
+  margin: 0;
+}
+.article blockquote {
+  background: #ededed;
+  padding: 14px 20px;
+  margin: 24px 0;
+  border-radius: 4px;
+}
+.article blockquote h2, .article blockquote h3 {
+  margin-top: 0;
+}
+.article ol, .article ul {
+  margin: 24px 0 24px 30px;
+}
+.article ol li, .article ul li {
+  margin: 0 0 12px;
+}
+.article ol li:last-child, .article ul li:last-child {
+  margin: 0;
+}
+.article ul li {
+  list-style: outside disc;
+}
+.article ol li {
+  list-style: outside decimal;
+}
+.article table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 24px 0;
+}
+.article table thead td {
+  background: #7221F5;
+  color: #fff;
+  padding: 10px 16px;
+}
+.article table tbody th, .article table tbody td {
+  border: 1px solid #ededed;
+  padding: 10px 16px;
+}
+.article table tbody tr:nth-child(even) th, .article table tbody tr:nth-child(even) td {
+  background: #f1f1f1;
 }
 
 /* firstscreen */

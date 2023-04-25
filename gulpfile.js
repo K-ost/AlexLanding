@@ -1,14 +1,11 @@
 // New gulp 4 gulpfile
 const gulp = require('gulp'),
-    //sass = require('gulp-sass'),
     sass = require('gulp-sass')(require('sass')),
     imagemin = require('gulp-imagemin'),
-    // imageminJpegtran = require('imagemin-jpegtran'),
-    // imageminPngquant = require('imagemin-pngquant'),
     concat = require('gulp-concat'),
     fileinclude = require('gulp-file-include'),
-    watch = require('gulp-watch'),
-    browserSync = require('browser-sync').create();
+    watch = require('gulp-watch');
+const browserSync = require('browser-sync').create();
 
 // Пути к таскам
 var path = {
@@ -50,13 +47,15 @@ gulp.task('html', async function() {
             prefix: '@@',
             basepath: '@file'
         }))
-        .pipe(gulp.dest(path.build.html));
+        .pipe(gulp.dest(path.build.html))
+        .pipe(browserSync.stream());
 });
 
 // JS
 gulp.task('js', async function () {
     gulp.src(path.src.js)
         .pipe(gulp.dest(path.build.js))
+        .pipe(browserSync.stream());
 });
 
 // Fonts
@@ -70,9 +69,7 @@ gulp.task('scss', async function () {
     gulp.src(path.src.style)
         .pipe(sass())
         .pipe(gulp.dest(path.build.css))
-        .pipe(browserSync.reload({
-            stream: true
-        }))
+        .pipe(browserSync.stream());
 });
 
 // Css vendor
@@ -87,7 +84,6 @@ gulp.task('img', async function () {
     gulp.src(path.src.img)
         .pipe(imagemin([
             imagemin.gifsicle({interlaced: true}),
-            //imagemin.mozjpeg({quality: 75, progressive: true}),
             imagemin.optipng({optimizationLevel: 5}),
             imagemin.svgo({
                 plugins: [
@@ -99,18 +95,14 @@ gulp.task('img', async function () {
         .pipe(gulp.dest(path.build.img))
 });
 
-// // browser-sync
-// gulp.task('browser-sync', function() {
-//     browserSync.init({
-//         server: {
-//             baseDir: "app"
-//         }
-//     });
-// });
-
-
 // Watch
 gulp.task('watch', async function() {
+    // browserSync
+    browserSync.init({
+        server: {
+            baseDir: "./public/"
+        }
+    })
     gulp.watch([path.watch.html], gulp.parallel('html'));
     gulp.watch([path.watch.style], gulp.parallel('scss'));
     gulp.watch([path.watch.js], gulp.parallel('js'));

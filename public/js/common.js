@@ -37,23 +37,26 @@ document.querySelector('.navbars').addEventListener('click', e => {
 
 
 // special_offer
-document.querySelector('.js-special_offer').addEventListener('click', e => {
-  e.preventDefault()
-  e.target.closest('.special_offer').classList.add('hidden')
-})
-if (window.screen.availWidth <= 2560) {
-  document.querySelector('.special_offer').remove()
-} else {
-  let offset = document.querySelector('.special_offer').offsetTop
-  window.addEventListener('scroll', e => {
-    let top = e.target.scrollingElement.scrollTop
-    let different = offset - top
-    if (different < 100) {
-      document.querySelector('.special_offer').classList.add('fixed')
-    } else {
-      document.querySelector('.special_offer').classList.remove('fixed')
-    }
+const specialOffer = document.querySelector('.js-special_offer')
+if (specialOffer) {
+  specialOffer.addEventListener('click', e => {
+    e.preventDefault()
+    e.target.closest('.special_offer').classList.add('hidden')
   })
+  if (window.screen.availWidth <= 2560) {
+    document.querySelector('.special_offer').remove()
+  } else {
+    let offset = document.querySelector('.special_offer').offsetTop
+    window.addEventListener('scroll', e => {
+      let top = e.target.scrollingElement.scrollTop
+      let different = offset - top
+      if (different < 100) {
+        document.querySelector('.special_offer').classList.add('fixed')
+      } else {
+        document.querySelector('.special_offer').classList.remove('fixed')
+      }
+    })
+  }
 }
 
 

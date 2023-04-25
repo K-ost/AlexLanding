@@ -17,7 +17,7 @@
   &-btns {display: flex; align-items: center;}
   .navbars {margin-right: 30px;}
   .btn {padding: 10px 20px;}
-  &.whited {
+  &.whited, &-inner {
     background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.4); padding: 4px 0;
     .navmenu li a {color: #808080;}
     .navbars {background-image: url(../images/svg/bars-dark.svg);}
@@ -85,6 +85,7 @@
 /* section */
 .section {
   padding: 60px 0; position: relative;
+  &-inner {padding-top: 80px;}
 }
 
 
@@ -92,6 +93,56 @@
 .pageheader {
   display: flex; align-items: center; justify-content: space-between; margin: 0 0 26px;
   h2 {font-weight: 500; font-size: 36px; line-height: 47px; margin: 0; @include font2;}
+}
+
+
+/* article */
+.article {
+  margin: 0 0 40px;
+  &:last-child {margin: 0;}
+  h1 {font-weight: 500; font-size: 36px; line-height: 47px; margin: 0 0 20px; @include font2;}
+  &-date {color: #757575; margin: 0 0 20px; font-size: 16px; line-height: 20px;}
+  .alignleft {float: left; margin: 3px 20px 0 0;}
+  .alignright {float: right; margin: 3px 0 0 20px;}
+  .aligncenter {display: block; margin: 24px auto;}
+
+  figure {
+    display: block;
+    img {display: block;}
+    figcaption {
+      display: block; color: #757575; font-size: 16px; line-height: 20px;
+      border: 1px solid #ededed; padding: 10px 14px; margin: 0;
+    }
+  }
+
+  blockquote {
+    background: #ededed; padding: 14px 20px; margin: 24px 0;
+    border-radius: 4px;
+    h2, h3 {margin-top: 0;}
+  }
+
+  ol, ul {
+    margin: 24px 0 24px 30px;
+    li {margin: 0 0 12px;}
+    li:last-child {margin: 0;}
+  }
+  ul li {list-style: outside disc;}
+  ol li {list-style: outside decimal;}
+
+  table {
+    border-collapse: collapse; width: 100%; margin: 24px 0;
+    thead td {
+      background: $purple; color: #fff; padding: 10px 16px;
+    }
+    tbody {
+      th, td {
+        border: 1px solid #ededed; padding: 10px 16px;
+      }
+      tr:nth-child(even) {
+        th, td {background: #f1f1f1;}
+      }
+    }
+  }
 }
 
 
