@@ -754,15 +754,13 @@ li:hover .file-list-remove {
   visibility: visible;
 }
 
-.header.whited .navmenu li.parent > a::before {
+.header.whited .navmenu li.parent > a::before, header.header-inner .navmenu li.parent > a::before {
   background-image: url(../images/svg/chevron-purple.svg);
 }
-
-.header.whited .navmenu li > a::after {
+.header.whited .navmenu li > a::after, header.header-inner .navmenu li > a::after {
   bottom: 3px;
 }
-
-.header.whited .navmenu li:hover > a {
+.header.whited .navmenu li:hover > a, header.header-inner .navmenu li:hover > a {
   color: #7221F5;
 }
 
@@ -813,7 +811,7 @@ li:hover .file-list-remove {
   font-weight: 500;
   font-size: 36px;
   line-height: 47px;
-  margin: 0 0 20px;
+  margin: 0 0 30px;
   font-family: "Roboto Condensed", sans-serif;
 }
 .article-date {

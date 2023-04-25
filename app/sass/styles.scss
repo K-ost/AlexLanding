@@ -71,9 +71,11 @@
   li:hover .children {opacity: 1; visibility: visible;}
 }
 
-.header.whited .navmenu li.parent>a::before {background-image: url(../images/svg/chevron-purple.svg);}
-.header.whited .navmenu li>a::after {bottom: 3px;}
-.header.whited .navmenu li:hover>a {color: $purple;}
+.header.whited, header.header-inner {
+  .navmenu li.parent>a::before {background-image: url(../images/svg/chevron-purple.svg);}
+  .navmenu li>a::after {bottom: 3px;}
+  .navmenu li:hover>a {color: $purple;}
+}
 
 /* navbars */
 .navbars {
@@ -100,7 +102,7 @@
 .article {
   margin: 0 0 40px;
   &:last-child {margin: 0;}
-  h1 {font-weight: 500; font-size: 36px; line-height: 47px; margin: 0 0 20px; @include font2;}
+  h1 {font-weight: 500; font-size: 36px; line-height: 47px; margin: 0 0 30px; @include font2;}
   &-date {color: #757575; margin: 0 0 20px; font-size: 16px; line-height: 20px;}
   .alignleft {float: left; margin: 3px 20px 0 0;}
   .alignright {float: right; margin: 3px 0 0 20px;}
