@@ -1982,6 +1982,9 @@ li:hover .file-list-remove {
 .section_case .pillsbox {
   margin: 0 0 12px;
 }
+.section_case-odd {
+  background: #F6F6F6;
+}
 .section_case-odd .section_case-img {
   order: 2;
 }
