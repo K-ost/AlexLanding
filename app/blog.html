@@ -1,0 +1,50 @@
+@@include('inc/header.html', { "title": "Blog", "inner": true })
+
+
+<section class="section section-inner">
+	<div class="container">
+    @@include('inc/breadcrumbs.html')
+    @@include('inc/search.html')
+    
+    <ul class="pillsbox">
+      <li><a href="#">Web Development</a></li>
+      <li><a href="#" class="active">Web Development</a></li>
+      <li><a href="#">Cloud Development</a></li>
+      <li><a href="#">FinTech</a></li>
+      <li><a href="#">Web</a></li>
+      <li><a href="#">Web Development</a></li>
+      <li><a href="#">Cloud Development</a></li>
+      <li><a href="#">FinTech</a></li>
+      <li><a href="#">Web</a></li>
+      <li><a href="#">Web Development</a></li>
+      <li><a href="#">Cloud Development</a></li>
+      <li><a href="#">FinTech</a></li>
+      <li><a href="#">Web</a></li>
+      <li><a href="#">Web Development</a></li>
+      <li><a href="#">Cloud Development</a></li>
+      <li><a href="#">FinTech</a></li>
+      <li><a href="#">Web</a></li>
+    </ul>
+
+
+    <div class="row blogcase-row">
+      @@loop('inc/blogcase.html', [
+        { "title": "Название", "text": "Lorem ipsum dolor sit amet consectetur. In odio sit eleifend justo. Gravida et habitant et accumsan. Id eget urna sociis id fermentum. Pretium augue in umsan. Id eget urnaumsan. Id eget urna" },
+        { "title": "There may be an extremely huge title. There may be an extremely huge title. There may be an extremely huge title.", "text": "Lorem ipsum dolor sit amet consectetur. In odio sit eleifend justo. Gravida et habitant et accumsan. Id eget urna sociis id fermentum. Pretium augue in umsan. Id eget urnaumsan. Id eget urna" },
+        { "title": "Название", "text": "Short description" },
+        { "title": "Название", "text": "Lorem ipsum dolor sit amet consectetur. In odio sit eleifend justo. Gravida et habitant et accumsan. Id eget urna sociis id fermentum. Pretium augue in umsan. Id eget urnaumsan. Id eget urna" },
+        { "title": "Название", "text": "Lorem ipsum dolor sit amet consectetur. In odio sit eleifend justo. Gravida et habitant et accumsan. Id eget urna sociis id fermentum. Pretium augue in umsan. Id eget urnaumsan. Id eget urna" },
+        { "title": "Название", "text": "Lorem ipsum dolor sit amet consectetur. In odio sit eleifend justo. Gravida et habitant et accumsan. Id eget urna sociis id fermentum. Pretium augue in umsan. Id eget urnaumsan. Id eget urna" },
+        { "title": "Название", "text": "Lorem ipsum dolor sit amet consectetur. In odio sit eleifend justo. Gravida et habitant et accumsan. Id eget urna sociis id fermentum. Pretium augue in umsan. Id eget urnaumsan. Id eget urna" },
+        { "title": "Название", "text": "Lorem ipsum dolor sit amet consectetur. In odio sit eleifend justo. Gravida et habitant et accumsan. Id eget urna sociis id fermentum. Pretium augue in umsan. Id eget urnaumsan. Id eget urna" },
+        { "title": "Название", "text": "Lorem ipsum dolor sit amet consectetur. In odio sit eleifend justo. Gravida et habitant et accumsan. Id eget urna sociis id fermentum. Pretium augue in umsan. Id eget urnaumsan. Id eget urna" }
+      ])
+    </div><!-- /row -->
+
+    @@include('inc/paginate.html')
+
+  </div>
+</section><!-- /section -->
+
+
+@@include('inc/footer.html')

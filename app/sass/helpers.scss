@@ -34,6 +34,7 @@ $grid: 20px;
 .row {
 	display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap;
 	margin-left: -(calc($grid / 2)); margin-right: -(calc($grid / 2));
+	&.align-items-center {align-items: center;}
 }
 [class*='grid'] {padding-left: (calc($grid / 2)); padding-right: (calc($grid / 2)); width: 100%;}
 .grid20 {-ms-flex: 0 0 20%; flex: 0 0 20%; max-width: 20%;}
@@ -108,6 +109,10 @@ textarea.form-control {
 	&-warning {
 		background: $orange; color: #fff;
 		&:hover {background: #FFB155;}
+	}
+	&-outline-warning {
+		background: 0; color: #F39228; box-shadow: inset 0 0 0 1px #F39228;
+		&:hover {background: #F39228; color: #fff;}
 	}
 	&-primary {
 		background: 0; border: 1px solid $purple; color: $purple;
@@ -245,3 +250,60 @@ body.modal_opened {
 		img {display: block; margin: 0 auto;}
 	}
 }
+
+
+/* breadcrumbs */
+.breadcrumbs {
+	margin: 0 0 30px; display: block; font-size: 18px;
+	line-height: 30px; color: #818181;
+	li {
+		display: inline-block; padding-right: 16px; position: relative; margin-right: 8px;
+		&::after {@include bf; @include icon(chevron-right,4px,8px); right: 0; top: 50%; margin-top: -4px;}
+		&:last-child {
+			margin-right: 0; padding-right: 0;
+			&::after {content: none; display: none;}
+		}
+	}
+	li a {color: #131921; text-decoration: none;}
+}
+
+
+/* searchbox */
+.searchbox {
+	width: 100%; max-width: 850px; margin: 0 0 30px; position: relative;
+	.form-control {border-radius: 50px; width: 100%; padding-right: 220px;}
+	&-btn {position: absolute; right: 0; top: 0; width: 200px; border-radius: 50px; padding: 14px;}
+}
+
+
+/* paginate */
+.paginate {
+	display: flex; align-items: center;
+	&_pager {
+		box-shadow: 0px 2px 4px rgba(61, 74, 88, 0.04), 0px 0px 2px rgba(61, 74, 88, 0.01);
+		border: 1px solid #F1F2F3; border-radius: 4px; display: flex; margin: 0 23px 0 0;
+		&-first, &-last {padding: 7px 4px;}
+		&-first {border-right: 1px solid #F1F2F3;}
+		&-last {border-left: 1px solid #F1F2F3;}
+		&-btns {display: flex; padding: 7px 13px;}
+		&-btn {
+			border-radius: 2px; width: 26px; height: 26px; display: flex; align-items: center;
+			justify-content: center; font-weight: 500; font-size: 14px; line-height: 16px;
+			color: #9A9A9A; text-decoration: none; margin: 0 6px 0 0;
+			&:last-child {margin: 0;}
+			&.active {background: #131921; color: #fff; font-weight: 600;}
+		}
+		a.paginate_pager-btn:hover {background: #f8f8f8;}
+		&-prev, &-next {
+			background: #f8f8f8 url(../images/svg/chevron-right.svg) center center / 6px no-repeat !important;
+		}
+		&-prev {transform: matrix(-1,0,0,1,0,0);}
+	}
+	&_found {font-weight: 600; font-size: 15px; line-height: 17px; color: #131921; margin: 0 20px 0 0;}
+	&_to {
+		display: flex; align-items: center;
+		span {font-weight: 500; font-size: 15px; line-height: 17px; color: #131921; margin: 0 13px 0 0;}
+	}
+}
+
+

@@ -88,6 +88,7 @@
 .section {
   padding: 60px 0; position: relative;
   &-inner {padding-top: 80px;}
+  &-grey {background: #F6F6F6;}
 }
 
 
@@ -100,9 +101,13 @@
 
 /* article */
 .article {
-  margin: 0 0 40px;
+  margin: 0 0 40px; font-weight: 300; font-size: 18px;
+  line-height: 31px; color: rgba(0,0,0,0.6);
   &:last-child {margin: 0;}
-  h1 {font-weight: 500; font-size: 36px; line-height: 47px; margin: 0 0 30px; @include font2;}
+  h1 {
+    color: #000; font-weight: 500; font-size: 36px; line-height: 47px;
+    margin: 0 0 30px; @include font2;
+  }
   &-date {color: #757575; margin: 0 0 20px; font-size: 16px; line-height: 20px;}
   .alignleft {float: left; margin: 3px 20px 0 0;}
   .alignright {float: right; margin: 3px 0 0 20px;}
@@ -115,6 +120,11 @@
       display: block; color: #757575; font-size: 16px; line-height: 20px;
       border: 1px solid #ededed; padding: 10px 14px; margin: 0;
     }
+  }
+
+  h2 {
+    color: #000; margin: 50px 0 30px;
+    &:first-child {margin-top: 0;}
   }
 
   blockquote {
@@ -491,6 +501,170 @@
 @media screen and (min-height: 900px) {
   .section-testimonials, .section-wedo {position: sticky; top: 0;}
 }
+
+
+
+/* portfolio_box */
+.portfolio_box {
+  color: rgba(255, 255, 255, 0.5); font-weight: 400; font-size: 18px;
+  line-height: 27px;
+  img {border-radius: 12px;}
+  h2 {color: #fff; font-weight: 500; font-size: 40px; line-height: 48px; margin: 0 0 25px;}
+  &-cat {color: #fff; font-size: 16px; line-height: 16px; margin: 0 0 25px;}
+}
+
+
+/* aside_content */
+.aside_content {
+  background: rgba(237, 227, 254, 0.15);
+  border-radius: 12px;
+  padding: 20px 35px;
+  &-title {font-weight: 600; font-size: 20px; line-height: 20px; margin: 0 0 25px;}
+  ul li {
+    font-weight: 400; font-size: 14px; line-height: 22px; margin: 0 0 20px;
+    padding-left: 25px; position: relative;
+    &::before {
+      @include bf; background: #D9D9D9; width: 10px; height: 10px; left: 0;
+      top: 5px; border-radius: 10px;
+    }
+    &:last-child {margin: 0;}
+    a {color: #636363; text-decoration: none;}
+    &.active {
+      &::before {background: $purple;}
+      a {color: $purple;}
+    }
+  }
+}
+
+
+/* section_portfolio */
+.section_portfolio {
+  background: #17403D; padding: 55px 0;
+  &.darken {background: #172040;}
+  img {border: 1px solid #D0D0D0; border-radius: 12px; display: block;}
+  &-text {
+    background: #fff; box-shadow: inset 30px 0px 16px rgba(105, 105, 105, 0.15);
+    border-radius: 0 24px 24px 0; padding: 40px; padding-left: 15px;
+    max-width: 445px; width: 100%; font-size: 16px; line-height: 27px;
+    color: rgba(0,0,0,0.6); font-weight: 300;
+    h3 {color: #000; font-size: 18px; line-height: 22px; margin: 0 0 15px;}
+  }
+  .row {margin: 0;}
+  [class*='grid'] {padding: 0;}
+  .order-first {display: flex; justify-content: flex-end;}
+  .order-first &-text {
+    box-shadow: inset -30px 0px 16px rgba(105, 105, 105, 0.15);
+    border-radius: 24px 0px 0px 24px; padding-left: 40px; padding-right: 15px;
+  }
+}
+
+
+/* pillsbox */
+.pillsbox {
+  margin-bottom: 50px;
+  &:last-child {margin-bottom: 0;}
+  li {
+    display: inline-block; font-weight: 300; font-size: 14px; line-height: 17px;
+    margin: 0 5px 10px 0;
+    a {
+      background: rgba(48, 23, 64, 0.2); border-radius: 32px; color: #301740;
+      display: block; padding: 9px 16px; text-decoration: none; transition: all 200ms ease-in-out;
+      &:hover, &.active {background: #301740; color: #fff;}
+    }
+  }
+}
+
+
+/* tagsbox */
+.tagsbox {
+  font-weight: 400; font-size: 14px; line-height: 16px; color: #363535;
+  margin: 0 0 40px;
+  a {
+    color: inherit; text-decoration: none; margin: 0 20px 0 0;
+    &:last-child {margin-right: 0;}
+  }
+}
+
+
+/* section_case */
+.section_case {
+  padding: 50px 0;
+  .row {margin: 0;}
+  [class*='grid'] {padding: 0;}
+  &-details.grid6 {padding-left: 60px;}
+  img {display: block; border: 1px solid #D0D0D0; border-radius: 12px;}
+  h3 {font-weight: 400; font-size: 18px; line-height: 22px; margin: 0 0 15px; color: #000;}
+  &-text {
+    font-weight: 300; font-size: 16px; color: rgba(0,0,0,0.6);
+    margin: 0 0 20px; line-height: 27px;
+  }
+  .pillsbox {margin: 0 0 12px;}
+  &-odd &-img {order: 2;}
+  &-odd &-details.grid6 {order: 1; padding-left: 0; padding-right: 60px;}
+}
+
+
+/* section-tabs */
+.section-tabs {
+  padding-bottom: 0;
+}
+.section-pills {
+  padding-top: 34px;
+}
+.tabs {
+  display: flex; position: relative;
+  &::after {
+    @include bf; background: #BEBEBE; left: 0; bottom: 0; height: 1px;
+    max-width: 486px; width: 100%;
+  }
+  li {
+    font-size: 24px; line-height: 30px; margin-right: 50px;
+    &:last-child {margin-right: 0;}
+    a {
+      color: #818181; display: block; padding-bottom: 24px; text-decoration: none;
+      position: relative; z-index: 10;
+      &::after {
+        @include bf; background: $orange; height: 7px; bottom: -3px;
+        border-radius: 7px; display: none; left: 0; right: 20px;
+      }
+      &.active {
+        color: $orange;
+        &::after {display: block;}
+      }
+    }
+  }
+}
+
+
+/* blogcase */
+.blogcase {
+  display: flex; flex-direction: column; margin-bottom: 40px;
+  &-row {margin-bottom: 60px;}
+  &-top {flex: 1;}
+  &-img {
+    // background-position: center center; background-repeat: no-repeat;
+    // background-size: cover; border-radius: 24px; display: block;
+    // height: 352px;
+    margin: 0 0 20px;
+    img {display: block;}
+  }
+  &-title {
+    font-size: 18px; line-height: 22px; margin: 0 0 15px; font-weight: 400;
+    a {color: #000; text-decoration: none;}
+  }
+  &-text {color: rgba(0, 0, 0, 0.6); font-size: 16px; line-height: 27px; margin: 0 0 20px;}
+  &-author {
+    border-top: 1px solid #BABABA; padding-top: 18px; display: flex; align-items: center;
+    &__img {
+      min-width: 55px; max-width: 55px; margin: 0 15px 0 0;
+      img {border-radius: 12px; display: block; max-width: 100%;}
+    }
+    &__name {font-size: 16px; line-height: 27px; font-weight: 400;}
+    &__role, &__date {font-size: 16px; line-height: 27px; color: rgba(0, 0, 0, 0.6);}
+    &__role {font-weight: 400; margin-right: 20px;}
+  }
+}
+
 
 
 
