@@ -13,6 +13,7 @@
   .container {width: 1200px;}
   .xl4 {flex: 0 0 33.3333333%; max-width: 33.3333333%;}
   .xl6 {flex: 0 0 50%; max-width: 50%;}
+  .xl8 {flex: 0 0 66.6666666%; max-width: 66.6666666%;}
 
   /* navmenu */
   .navmenu li {margin: 0 30px 0 0;}
@@ -50,7 +51,9 @@
 /* lg screen */
 @media screen and (max-width: 1230px) {
   .container {width: 992px;}
+  .lg4 {flex: 0 0 33.3333333%; max-width: 33.3333333%;}
   .lg6 {flex: 0 0 50%; max-width: 50%;}
+  .lg8 {flex: 0 0 66.6666666%; max-width: 66.6666666%;}
   .lg12 {flex: 0 0 100%; max-width: 100%;}
 
   /* header */
@@ -157,6 +160,11 @@
     .order-first {display: block;}
   }
 
+  /* paginate */
+  .paginate {display: block; text-align: center;}
+  .paginate_pager, .paginate_found {margin: 0 0 20px;}
+  .paginate_to {justify-content: center;}
+
 
 }
 
@@ -172,6 +180,7 @@
   .xs-visible, .xs-block {display: block !important;}
   .xs-flex {display: flex !important;}
   .section {padding: 40px 0;}
+  .section-inner {padding-top: 80px;}
 
   /* pageheader */
   .pageheader {display: block; margin: 0 0 24px;}

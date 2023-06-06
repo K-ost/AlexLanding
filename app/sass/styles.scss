@@ -104,9 +104,15 @@
   margin: 0 0 40px; font-weight: 300; font-size: 18px;
   line-height: 31px; color: rgba(0,0,0,0.6);
   &:last-child {margin: 0;}
+  &-row {margin-bottom: 100px;}
   h1 {
     color: #000; font-weight: 500; font-size: 36px; line-height: 47px;
     margin: 0 0 30px; @include font2;
+  }
+  h2 {
+    color: #000; font-weight: 600; font-size: 24px; line-height: 32px;
+    margin: 50px 0 30px;
+    &:first-child {margin-top: 0;}
   }
   &-date {color: #757575; margin: 0 0 20px; font-size: 16px; line-height: 20px;}
   .alignleft {float: left; margin: 3px 20px 0 0;}
@@ -519,6 +525,7 @@
   background: rgba(237, 227, 254, 0.15);
   border-radius: 12px;
   padding: 20px 35px;
+  &-sticky {position: sticky; top: 60px;}
   &-title {font-weight: 600; font-size: 20px; line-height: 20px; margin: 0 0 25px;}
   ul li {
     font-weight: 400; font-size: 14px; line-height: 22px; margin: 0 0 20px;
@@ -640,7 +647,10 @@
 /* blogcase */
 .blogcase {
   display: flex; flex-direction: column; margin-bottom: 40px;
-  &-row {margin-bottom: 60px;}
+  &-row {
+    margin-bottom: 60px;
+    &:last-child {margin-bottom: 0;}
+  }
   &-top {flex: 1;}
   &-img {
     // background-position: center center; background-repeat: no-repeat;
@@ -658,9 +668,11 @@
     border-top: 1px solid #BABABA; padding-top: 18px; display: flex; align-items: center;
     &__img {
       min-width: 55px; max-width: 55px; margin: 0 15px 0 0;
+      &.large {min-width: 85px; max-width: 85px;}
       img {border-radius: 12px; display: block; max-width: 100%;}
     }
     &__name {font-size: 16px; line-height: 27px; font-weight: 400;}
+    &__name {color: #000;}
     &__role, &__date {font-size: 16px; line-height: 27px; color: rgba(0, 0, 0, 0.6);}
     &__role {font-weight: 400; margin-right: 20px;}
   }

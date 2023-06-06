@@ -1,0 +1,97 @@
+@@include('inc/header.html', { "title": "Blog page", "inner": true })
+
+
+<section class="section section-inner">
+	<div class="container">
+    @@include('inc/breadcrumbs.html')
+    
+    <div class="row article-row">
+      <div class="grid3 xl4 tb12">
+        @@include('inc/content.html', { "sticky": true })
+      </div><!-- /grid -->
+      
+      <div class="grid6 xl8 tb12">
+        <div class="article article-blog">
+          <h1>Lorem ipsum dolor sit amet</h1>
+          
+          <figure>
+            <img src="images/uploads/blog.webp" alt="">
+            <figcaption>orem ipsum dolor sit amet consectetur. In odio sit eleifend justo. Gravida et habitant et accumsan. Id eget urna sociis id fermentum. Pretium augue in umsan. Id eget urnaumsan. Id eget urna</figcaption>
+          </figure>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.</p>
+
+          <ul class="pillsbox">
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#" class="active">Web Development</a></li>
+            <li><a href="#">Cloud Development</a></li>
+            <li><a href="#">FinTech</a></li>
+            <li><a href="#">Web</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Cloud Development</a></li>
+            <li><a href="#">FinTech</a></li>
+            <li><a href="#">Web</a></li>
+          </ul><!-- /pillsbox -->
+
+          <h2>Solution</h2>
+
+          <p>Our client's application is a construction project management solution with full collaboration capability. It manages activities related to construction projects from the initial idea to completion. Project partners can access the toolset that the app provides. It includes customers, stakeholders that may have a financial influence on the application itself, contractors, subcontractors, etc. The system ensures the right person has the correct information at the right time. The application has been developed to be data-driven, so the content can be generated properly, turning on and off the functionality for different users.</p>
+
+          <p>
+            <img src="images/uploads/blog2.webp" alt="">
+          </p>
+
+          <h2>Solution</h2>
+
+          <p>Our client's application is a construction project management solution with full collaboration capability. It manages activities related to construction projects from the initial idea to completion. Project partners can access the toolset that the app provides. It includes customers, stakeholders that may have a financial influence on the application itself, contractors, subcontractors, etc. The system ensures the right person has the correct information at the right time. The application has been developed to be data-driven, so the content can be generated properly, turning on and off the functionality for different users.</p>
+
+        </div><!-- /article -->
+
+        <div class="article-meta">
+          <div class="blogcase-author">
+            <div class="blogcase-author__img large">
+              <img src="images/uploads/author.webp" alt="">
+            </div>
+            <div class="blogcase-author__details">
+              <div class="blogcase-author__name">Морару Валентин</div>
+              <span class="blogcase-author__role">Web Development</span>
+            </div>
+          </div><!-- /blogcase-author -->
+
+          <div class="article_dates">
+            <div class="article_dates-item article_dates-date">
+              <span>Дата создания:</span>
+              Июнь 19 2023
+            </div>
+            <div class="article_dates-item article_dates-update">
+              <span>Дата обновления:</span>
+              Июнь 19 2023
+            </div>
+          </div><!-- /article_dates -->
+        </div><!-- /article-meta -->
+
+        <div class="tagsbox">
+          <a href="#">#highload</a>
+          <a href="#">#SEO</a>
+          <a href="#">#pagespeed</a>
+        </div>
+
+      </div><!-- /grid -->
+    </div><!-- /row -->
+
+
+    <h2 class="pagetitle">Рекомендуем</h2>
+
+    <div class="row blogcase-row">
+      @@loop('inc/blogcase.html', [
+        { "title": "Название", "text": "Lorem ipsum dolor sit amet consectetur. In odio sit eleifend justo. Gravida et habitant et accumsan. Id eget urna sociis id fermentum. Pretium augue in umsan. Id eget urnaumsan. Id eget urna" },
+        { "title": "Название", "text": "Lorem ipsum dolor sit amet consectetur. In odio sit eleifend justo. Gravida et habitant et accumsan. Id eget urna sociis id fermentum. Pretium augue in umsan. Id eget urnaumsan. Id eget urna" },
+        { "title": "Название", "text": "Lorem ipsum dolor sit amet consectetur. In odio sit eleifend justo. Gravida et habitant et accumsan. Id eget urna sociis id fermentum. Pretium augue in umsan. Id eget urnaumsan. Id eget urna" }
+      ])
+    </div><!-- /row -->
+
+  </div>
+</section><!-- /section -->
+
+
+@@include('inc/footer.html')

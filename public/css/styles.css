@@ -202,6 +202,15 @@ input::-moz-focus-inner {
   display: none !important;
 }
 
+/* pagetitle */
+.pagetitle {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 42px;
+  color: #0E0818;
+  margin: 0 0 39px;
+}
+
 /* === FORMS === */
 .form-control, .btn {
   font-family: "Rubik", sans-serif;
@@ -659,7 +668,7 @@ li:hover .file-list-remove {
   box-shadow: 0px 2px 4px rgba(61, 74, 88, 0.04), 0px 0px 2px rgba(61, 74, 88, 0.01);
   border: 1px solid #F1F2F3;
   border-radius: 4px;
-  display: flex;
+  display: inline-flex;
   margin: 0 23px 0 0;
 }
 .paginate_pager-first, .paginate_pager-last {
@@ -723,6 +732,13 @@ li:hover .file-list-remove {
   line-height: 17px;
   color: #131921;
   margin: 0 13px 0 0;
+}
+.paginate .form-control {
+  background: url(../images/svg/chevron-more.svg) calc(100% - 10px) center no-repeat;
+  width: 81px;
+  height: 34px;
+  font-size: 15px;
+  padding: 4px 24px 4px 12px;
 }
 
 /* Header */
@@ -965,6 +981,9 @@ li:hover .file-list-remove {
 .article:last-child {
   margin: 0;
 }
+.article-row {
+  margin-bottom: 100px;
+}
 .article h1 {
   color: #000;
   font-weight: 500;
@@ -972,6 +991,16 @@ li:hover .file-list-remove {
   line-height: 47px;
   margin: 0 0 30px;
   font-family: "Roboto Condensed", sans-serif;
+}
+.article h2 {
+  color: #000;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  margin: 50px 0 30px;
+}
+.article h2:first-child {
+  margin-top: 0;
 }
 .article-date {
   color: #757575;
@@ -1814,6 +1843,10 @@ li:hover .file-list-remove {
   border-radius: 12px;
   padding: 20px 35px;
 }
+.aside_content-sticky {
+  position: sticky;
+  top: 60px;
+}
 .aside_content-title {
   font-weight: 600;
   font-size: 20px;
@@ -2062,6 +2095,9 @@ li:hover .file-list-remove {
 .blogcase-row {
   margin-bottom: 60px;
 }
+.blogcase-row:last-child {
+  margin-bottom: 0;
+}
 .blogcase-top {
   flex: 1;
 }
@@ -2098,6 +2134,10 @@ li:hover .file-list-remove {
   max-width: 55px;
   margin: 0 15px 0 0;
 }
+.blogcase-author__img.large {
+  min-width: 85px;
+  max-width: 85px;
+}
 .blogcase-author__img img {
   border-radius: 12px;
   display: block;
@@ -2107,6 +2147,9 @@ li:hover .file-list-remove {
   font-size: 16px;
   line-height: 27px;
   font-weight: 400;
+}
+.blogcase-author__name {
+  color: #000;
 }
 .blogcase-author__role, .blogcase-author__date {
   font-size: 16px;
@@ -2312,6 +2355,15 @@ input::-moz-focus-inner {
 
 .xs-visible, .sm-visible, .tb-visible, .lg-visible, .tb-inline {
   display: none !important;
+}
+
+/* pagetitle */
+.pagetitle {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 42px;
+  color: #0E0818;
+  margin: 0 0 39px;
 }
 
 /* === FORMS === */
@@ -2771,7 +2823,7 @@ li:hover .file-list-remove {
   box-shadow: 0px 2px 4px rgba(61, 74, 88, 0.04), 0px 0px 2px rgba(61, 74, 88, 0.01);
   border: 1px solid #F1F2F3;
   border-radius: 4px;
-  display: flex;
+  display: inline-flex;
   margin: 0 23px 0 0;
 }
 .paginate_pager-first, .paginate_pager-last {
@@ -2836,6 +2888,13 @@ li:hover .file-list-remove {
   color: #131921;
   margin: 0 13px 0 0;
 }
+.paginate .form-control {
+  background: url(../images/svg/chevron-more.svg) calc(100% - 10px) center no-repeat;
+  width: 81px;
+  height: 34px;
+  font-size: 15px;
+  padding: 4px 24px 4px 12px;
+}
 
 /* xxl screen */
 @media screen and (max-width: 2010px) {
@@ -2857,6 +2916,11 @@ li:hover .file-list-remove {
   .xl6 {
     flex: 0 0 50%;
     max-width: 50%;
+  }
+
+  .xl8 {
+    flex: 0 0 66.6666666%;
+    max-width: 66.6666666%;
   }
 
   /* navmenu */
@@ -2923,9 +2987,19 @@ li:hover .file-list-remove {
     width: 992px;
   }
 
+  .lg4 {
+    flex: 0 0 33.3333333%;
+    max-width: 33.3333333%;
+  }
+
   .lg6 {
     flex: 0 0 50%;
     max-width: 50%;
+  }
+
+  .lg8 {
+    flex: 0 0 66.6666666%;
+    max-width: 66.6666666%;
   }
 
   .lg12 {
@@ -3151,6 +3225,20 @@ li:hover .file-list-remove {
   .section_portfolio .order-first {
     display: block;
   }
+
+  /* paginate */
+  .paginate {
+    display: block;
+    text-align: center;
+  }
+
+  .paginate_pager, .paginate_found {
+    margin: 0 0 20px;
+  }
+
+  .paginate_to {
+    justify-content: center;
+  }
 }
 /* Mobile large screen */
 @media screen and (max-width: 750px) {
@@ -3187,6 +3275,10 @@ li:hover .file-list-remove {
 
   .section {
     padding: 40px 0;
+  }
+
+  .section-inner {
+    padding-top: 80px;
   }
 
   /* pageheader */

@@ -54,6 +54,13 @@ $grid: 20px;
 .xs-visible, .sm-visible, .tb-visible, .lg-visible, .tb-inline {display: none !important;}
 
 
+/* pagetitle */
+.pagetitle {
+	font-weight: 500; font-size: 30px; line-height: 42px;
+	color: #0E0818; margin: 0 0 39px;
+}
+
+
 /* === FORMS === */
 .form-control, .btn {@include font; @include inp;}
 
@@ -281,7 +288,7 @@ body.modal_opened {
 	display: flex; align-items: center;
 	&_pager {
 		box-shadow: 0px 2px 4px rgba(61, 74, 88, 0.04), 0px 0px 2px rgba(61, 74, 88, 0.01);
-		border: 1px solid #F1F2F3; border-radius: 4px; display: flex; margin: 0 23px 0 0;
+		border: 1px solid #F1F2F3; border-radius: 4px; display: inline-flex; margin: 0 23px 0 0;
 		&-first, &-last {padding: 7px 4px;}
 		&-first {border-right: 1px solid #F1F2F3;}
 		&-last {border-left: 1px solid #F1F2F3;}
@@ -303,6 +310,10 @@ body.modal_opened {
 	&_to {
 		display: flex; align-items: center;
 		span {font-weight: 500; font-size: 15px; line-height: 17px; color: #131921; margin: 0 13px 0 0;}
+	}
+	.form-control {
+		background: url(../images/svg/chevron-more.svg) calc(100% - 10px) center no-repeat;
+		width: 81px; height: 34px; font-size: 15px; padding: 4px 24px 4px 12px;
 	}
 }
 
