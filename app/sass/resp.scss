@@ -99,6 +99,7 @@
   .tb-flex {display: flex !important;}
   .order-tb-first {-ms-flex-order: -1; order: -1;}
   .order-tb-last {-ms-flex-order: 13; order: 13;}
+  .navmenu {top: 52px;}
 
   
   /* firstscreen */
@@ -162,8 +163,18 @@
 
   /* paginate */
   .paginate {display: block; text-align: center;}
-  .paginate_pager, .paginate_found {margin: 0 0 20px;}
+  .paginate_pager {margin: 0 0 20px;}
   .paginate_to {justify-content: center;}
+
+  /* aside_content */
+  .aside_content {margin: 0 0 30px;}
+
+  /* portfolio */
+  .section-pills {padding-bottom: 10px !important;}
+  .section_case-img {margin-bottom: 30px;}
+  .section_case-details.grid6 {padding-left: 0;}
+  .section_case-odd .section_case-img {order: 1;}
+  .section_case-odd .section_case-details.grid6 {order: 2; padding-right: 0;}
 
 
 }
@@ -262,6 +273,20 @@
   }
 
 
+  /* portfolio */
+  .section_case {padding: 40px 0;}
+  .tabs li {font-size: 16px; margin-right: 30px;}
+
+  /* aside_content */
+  .aside_content {padding: 20px;}
+
+  /* article-meta */
+  .article-row {margin-bottom: 40px;}
+  .article-meta {display: block; margin: 0 0 30px;}
+  .article-meta .blogcase-author {margin: 0 0 30px;}
+  .article_dates-item {margin: 0 0 10px;}
+
+
 }
 
 
@@ -291,7 +316,12 @@
   /* article */
   .article {
     .alignleft, .alignright {float: none; display: block; margin: 24px auto;}
-    figure {display: block; width: 300px;}
+    figure img {border-radius: 10px;}
+    figure figcaption {
+      // position: relative; left: auto; bottom: auto; margin-top: 10px; width: auto;
+      border-radius: 0 0 10px 10px;
+      font-size: 16px; line-height: 20px; padding: 8px 16px;
+    }
   }
 
 

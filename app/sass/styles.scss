@@ -120,11 +120,12 @@
   .aligncenter {display: block; margin: 24px auto;}
 
   figure {
-    display: block;
-    img {display: block;}
+    display: block; margin: 30px 0; position: relative;
+    img {display: block; width: 100%; border-radius: 24px;}
     figcaption {
-      display: block; color: #757575; font-size: 16px; line-height: 20px;
-      border: 1px solid #ededed; padding: 10px 14px; margin: 0;
+      background: rgba(55, 55, 55, 0.61); border-radius: 0px 0px 24px 24px;
+      position: absolute; left: 0; bottom: 0; width: 100%; font-size: 16px;
+      line-height: 27px; color: #fff; padding: 30px;
     }
   }
 
@@ -139,7 +140,7 @@
     h2, h3 {margin-top: 0;}
   }
 
-  ol, ul {
+  ol, ul:not(.pillsbox) {
     margin: 24px 0 24px 30px;
     li {margin: 0 0 12px;}
     li:last-child {margin: 0;}
@@ -162,6 +163,26 @@
     }
   }
 }
+
+
+/* article-meta */
+.article-meta {
+  display: flex; justify-content: space-between; align-items: center; margin: 0 0 50px;
+  border-top: 1px solid #d4d4d4; padding: 20px 0 0;
+  .blogcase-author {border: 0; padding: 0;}
+}
+.article_dates {
+  font-weight: 300; font-size: 14px; line-height: 24px; color: #6e6b74;
+  span {color: #0E0818; font-weight: 400; margin-right: 4px;}
+  &-item {
+    padding-left: 32px; position: relative; margin: 0 0 20px;
+    &::before {@include bf; left: 0; top: 50%; margin-top: -10px;}
+    &:last-child {margin: 0;}
+  }
+  &-date::before {@include icon(date,20px,20px);}
+  &-update::before {@include icon(refresh,20px,20px);}
+}
+
 
 
 /* firstscreen */
@@ -472,6 +493,16 @@
 }
 
 
+/* tech_row */
+.tech_row {
+  &-item {
+    display: inline-block; margin: 0 30px 0 0; text-align: center;
+    &:last-child {margin: 0;}
+    img {height: 42px; display: block; margin: 0 auto 8px;}
+    span {font-weight: 400; font-size: 14px; line-height: 14px; color: #767676;}
+  }
+}
+
 
 /* special_offer */
 .special_offer {
@@ -599,13 +630,14 @@
   .row {margin: 0;}
   [class*='grid'] {padding: 0;}
   &-details.grid6 {padding-left: 60px;}
-  img {display: block; border: 1px solid #D0D0D0; border-radius: 12px;}
+  &-img img {display: block; border: 1px solid #D0D0D0; border-radius: 12px;}
   h3 {font-weight: 400; font-size: 18px; line-height: 22px; margin: 0 0 15px; color: #000;}
   &-text {
     font-weight: 300; font-size: 16px; color: rgba(0,0,0,0.6);
     margin: 0 0 20px; line-height: 27px;
   }
   .pillsbox {margin: 0 0 12px;}
+  .tech_row {margin: 0 0 30px;}
   &-odd {background: #F6F6F6;}
   &-odd &-img {order: 2;}
   &-odd &-details.grid6 {order: 1; padding-left: 0; padding-right: 60px;}
@@ -614,7 +646,7 @@
 
 /* section-tabs */
 .section-tabs {
-  padding-bottom: 0;
+  padding-bottom: 0 !important;
 }
 .section-pills {
   padding-top: 34px;
@@ -665,7 +697,7 @@
   }
   &-text {color: rgba(0, 0, 0, 0.6); font-size: 16px; line-height: 27px; margin: 0 0 20px;}
   &-author {
-    border-top: 1px solid #BABABA; padding-top: 18px; display: flex; align-items: center;
+    border-top: 1px solid #d4d4d4; padding-top: 18px; display: flex; align-items: center;
     &__img {
       min-width: 55px; max-width: 55px; margin: 0 15px 0 0;
       &.large {min-width: 85px; max-width: 85px;}
