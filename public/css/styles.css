@@ -1245,6 +1245,10 @@ li:hover .file-list-remove {
   align-items: flex-end;
   position: relative;
 }
+.firstscreen .container-centered {
+  align-items: center;
+  padding-top: 60px;
+}
 .firstscreen-text {
   color: rgba(255, 255, 255, 0.5);
   font-weight: 400;
@@ -1939,6 +1943,10 @@ li:hover .file-list-remove {
 }
 .aside_content-sticky {
   position: sticky;
+  top: 60px;
+}
+.aside_content.fixed {
+  position: fixed;
   top: 60px;
 }
 .aside_content-title {
@@ -3251,6 +3259,10 @@ li:hover .file-list-remove {
     display: none;
   }
 
+  .portfolio_box-img {
+    margin-bottom: 20px;
+  }
+
   /* tech-container */
   .tech-tabs {
     display: block;
@@ -3615,6 +3627,20 @@ li:hover .file-list-remove {
 
   .article_dates-item {
     margin: 0 0 10px;
+  }
+
+  /* portfolio_box */
+  .portfolio_box {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .portfolio_box h2 {
+    font-size: 24px;
+    line-height: 30px;
+    margin: 0 0 15px;
+  }
+  .portfolio_box-cat {
+    margin: 0 0 20px;
   }
 }
 @media screen and (max-width: 500px) {

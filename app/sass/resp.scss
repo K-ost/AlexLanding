@@ -121,6 +121,8 @@
     }
   }
 
+  .portfolio_box-img {margin-bottom: 20px;}
+
 
   /* tech-container */
   .tech {
@@ -285,6 +287,13 @@
   .article-meta {display: block; margin: 0 0 30px;}
   .article-meta .blogcase-author {margin: 0 0 30px;}
   .article_dates-item {margin: 0 0 10px;}
+
+  /* portfolio_box */
+  .portfolio_box {
+    font-size: 16px; line-height: 22px;
+    h2 {font-size: 24px; line-height: 30px; margin: 0 0 15px;}
+    &-cat {margin: 0 0 20px;}
+  }
 
 
 }

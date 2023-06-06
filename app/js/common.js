@@ -117,4 +117,25 @@ closeModal('.modal-close')
 closeModal('.modal-overlay')
 
 
+// aside fix
+const asideFix = document.querySelector('.js-fix')
+const asideFixWidth = document.querySelector('.js-fix').offsetWidth
+const asideFixTrigger = document.querySelector('.js-fix_trigger')
+if (asideFix || asideFixTrigger) {
+  if (document.documentElement.clientWidth > 1020) {
+    const top = asideFixTrigger.getBoundingClientRect().top - 60
+    window.addEventListener('scroll', e => {
+      let currentTop = window.pageYOffset
+      if (currentTop > top) {
+        asideFix.classList.add('fixed')
+        asideFix.style.width = asideFixWidth + 'px'
+      } else {
+        asideFix.classList.remove('fixed')
+        asideFix.removeAttribute('style')
+      }
+    })
+  }
+}
+
+
 
