@@ -440,7 +440,7 @@
 
 /* footer */
 .footer {
-  background: #020006; position: relative;
+  background: #020006; position: relative; z-index: 150;
   .container {padding: 42px 0 60px;}
   &-nav {
     font-size: 14px; line-height: 20px; font-weight: 400; margin: 0 44px 0 0;
@@ -560,7 +560,7 @@
   border-radius: 12px;
   padding: 20px 35px;
   &-sticky {position: sticky; top: 60px;}
-  &.fixed  {position: fixed; top: 60px;}
+  &.fixed  {position: fixed; top: 60px; z-index: 100;}
   &-title {font-weight: 600; font-size: 20px; line-height: 20px; margin: 0 0 25px;}
   ul li {
     font-weight: 400; font-size: 14px; line-height: 22px; margin: 0 0 20px;
@@ -581,7 +581,7 @@
 
 /* section_portfolio */
 .section_portfolio {
-  background: #17403D; padding: 55px 0;
+  background: #17403D; padding: 55px 0; position: relative; z-index: 150;
   &.darken {background: #172040;}
   img {border: 1px solid #D0D0D0; border-radius: 12px; display: block;}
   &-text {

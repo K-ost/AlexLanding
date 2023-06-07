@@ -1700,6 +1700,7 @@ li:hover .file-list-remove {
 .footer {
   background: #020006;
   position: relative;
+  z-index: 150;
 }
 .footer .container {
   padding: 42px 0 60px;
@@ -1948,6 +1949,7 @@ li:hover .file-list-remove {
 .aside_content.fixed {
   position: fixed;
   top: 60px;
+  z-index: 100;
 }
 .aside_content-title {
   font-weight: 600;
@@ -1992,6 +1994,8 @@ li:hover .file-list-remove {
 .section_portfolio {
   background: #17403D;
   padding: 55px 0;
+  position: relative;
+  z-index: 150;
 }
 .section_portfolio.darken {
   background: #172040;
